@@ -20,6 +20,8 @@ if (string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.
 }
 
 
+string systemMessage = "You are an AI assistant helping to write emails\r\n";
+
 // Initialize the Azure OpenAI client
 OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
 
@@ -44,7 +46,8 @@ do
     {
         Messages =
         {
-            new ChatRequestUserMessage(inputText)
+            new ChatRequestSystemMessage(systemMessage),
+            new ChatRequestUserMessage(inputText),
         },
         MaxTokens = 400,
         Temperature = 0.7f,
