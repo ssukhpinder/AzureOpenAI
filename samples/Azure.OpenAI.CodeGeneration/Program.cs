@@ -72,7 +72,6 @@ async Task GetResponseFromOpenAI(string prompt)
     string userPrompt = prompt;
 
     // Format and send the request to the model
-    // Format and send the request to the model
     var chatCompletionsOptions = new ChatCompletionsOptions()
     {
         Messages =
