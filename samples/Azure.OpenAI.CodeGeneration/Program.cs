@@ -1,12 +1,9 @@
 ﻿// Implicit using statements are included
-using System.Text;
-using System.Text.Json;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
 using Azure;
-
 // Add Azure OpenAI package
 using Azure.AI.OpenAI;
+using Microsoft.Extensions.Configuration;
+using System.Text.Json;
 
 // Build a config object and retrieve user settings.
 IConfiguration config = new ConfigurationBuilder()

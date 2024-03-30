@@ -1,10 +1,8 @@
 ﻿// Implicit using statements are included
-using System.Text;
-using System.Text.Json;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
 using Azure;
 using Azure.AI.OpenAI;
+using Microsoft.Extensions.Configuration;
+using System.Text.Json;
 
 // Add Azure OpenAI package
 
